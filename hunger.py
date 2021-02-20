@@ -8,7 +8,7 @@ class Hunger:
     def decay_hunger(self):
         threading.Timer(5.0,self.decay_hunger).start()
         if self.hunger>10 :
-            self.hunger*=0.99
+            self.hunger+=(120-hunger)*0.01 #Higher values mean that Disgotchi is more hungry
 
     def add_hunger(self, increment):
         self.hunger+=increment
