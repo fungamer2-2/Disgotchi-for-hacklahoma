@@ -42,7 +42,7 @@ async def hunger_handler(m_handler):
 
 async def mood_handler(m_handler):
   if "feed" in m_handler.content :
-    hunger.add_hunger(20)
+    hunger.add_hunger(-20)
     happiness.add_happiness(10)
     await m_handler.send('Back to happy! (•ө•)♡')
   elif "how" in m_handler.content:
@@ -81,7 +81,7 @@ async def mood_handler(m_handler):
     await m_handler.send(happiness.throw_tantrum())
   elif "poop" in m_handler.content:
     await m_handler.send('(⊙ө⊙)💩')
-    hunger.add_hunger(-10)
+    hunger.add_hunger(10)
   elif "feel" in m_handler.content:
     await m_handler.send(happiness.rand_mood())
   elif "compliment" in m_handler.content:
